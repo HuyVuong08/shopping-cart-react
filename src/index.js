@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 console.log("load Pixel");
 
-function (w, d, t) {
+function TikTokPixel (w, d, t) {
   w.TiktokAnalyticsObject = t;
   var ttq = (w[t] = w[t] || []);
   (ttq.methods = [
