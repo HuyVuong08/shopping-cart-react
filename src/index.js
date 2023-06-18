@@ -54,7 +54,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
   };
   ttq.load("CGR5QM3C77U3HDTUBMV0");
   ttq.page();
-  console.log("Pixel: Load Success");
+  console.log("Pixel: Loaded");
 })(window, document, "ttq");
 
 ReactDOM.render(
