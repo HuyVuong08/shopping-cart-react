@@ -143,6 +143,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
                 j = d.createElement(s),
+                // eslint-disable-next-line
                 dl = l != "dataLayer" ? "&l=" + l : "";
         j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
