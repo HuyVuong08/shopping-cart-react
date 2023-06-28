@@ -151,11 +151,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 })(window, document, "script", "dataLayer", "GTM-5D9S9CM");
 document.addEventListener("DOMContentLoaded", () => {
         alert("DOM ready!");
-        const AddToCart = [...document.getElementsByClassName("btn btn-primary")];
-        for (const ele in AddToCart) {
-                ele.onclick = () => alert("clicked");
-                // .map(ele => ele.onclick = () => alert("clicked"));
-        }
+        const AddToCart = [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = () => alert("clicked"));
+        // for (const ele in AddToCart) {
+        //         ele.onclick = () => alert("clicked");
+        //         .map(ele => ele.onclick = () => alert("clicked"));
+        // }
 });
 
 // const scr = "<script async src="https://www.googletagmanager.com/gtag/js?id=G-EJW5Q5ZLFW"></script>"
