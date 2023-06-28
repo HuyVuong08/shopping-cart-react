@@ -151,9 +151,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 })(window, document, "script", "dataLayer", "GTM-5D9S9CM");
 document.addEventListener("DOMContentLoaded", () => {
         alert("DOM ready!");
-        const AddToCart = document.getElementsByClassName("btn btn-primary");
+        const AddToCart = [...document.getElementsByClassName("btn btn-primary")];
         for (const ele in AddToCart) {
                 ele.onclick = () => alert("clicked");
+                // .map(ele => ele.onclick = () => alert("clicked"));
         }
 });
 
