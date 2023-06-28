@@ -149,6 +149,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
         f.parentNode.insertBefore(j, f);
         console.log("GTM: Loaded");
 })(window, document, "script", "dataLayer", "GTM-5D9S9CM");
+document.addEventListener("DOMContentLoaded", () => {
+        alert("DOM ready!");
+        const AddToCart = document.getElementsByClassName("btn btn-primary");
+        for (const ele in AddToCart) {
+                ele.onclick = () => alert("clicked");
+        }
+});
 
 // const scr = "<script async src="https://www.googletagmanager.com/gtag/js?id=G-EJW5Q5ZLFW"></script>"
 // window.dataLayer = window.dataLayer || [];
