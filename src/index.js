@@ -149,6 +149,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
         f.parentNode.insertBefore(j, f);
         console.log("GTM: Loaded");
 })(window, document, "script", "dataLayer", "GTM-5D9S9CM");
+
 document.addEventListener("DOMContentLoaded", () => {
         console.log("DOM ready!");
         // [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = (ele) => alert("clicked"));
