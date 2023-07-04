@@ -134,7 +134,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
                 e.parentNode.insertBefore(n, e);
         };
         ttq.load("CI951JRC77UFB57U00O0");
-        ttq.load("CIHTDCBC77U8RIVU1230");
         ttq.page();
         console.log("Pixel: Loaded");
 })(window, document, "ttq");
