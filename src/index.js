@@ -144,6 +144,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
                         const price = parseFloat(ele.parentNode.childNodes[1].childNodes[0].innerText.replace(/[^0-9]/g, ''));
                         console.log(ele.innerText, ':', name, '-', price);
                         if (ele.innerText === "Add to Cart") {
+                                console.log("Pixel fired");
                                 ttq.identify({
                                     email: 'jamie.vuong@bytedance.com',
                                     phone_number: '+110123456789',
