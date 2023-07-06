@@ -153,7 +153,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 document.addEventListener("DOMContentLoaded", () => {
         console.log("DOM ready!");
         // [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = (ele) => alert("clicked"));
-        [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = () => console.log(ele.innerText));
+        [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = () => {
+                const name = ele.parentNode.childNodes[0].innerText;
+                const price = parseFloat(ele.parentNode.childNodes[1].childNodes[0].innerText.replace(/[^0-9]/g, ''));
+                console.log(ele.innerText, ':', name, '-', price);
+        });
         // const AddToCart = 
         // for (const ele in AddToCart) {
         //         ele.onclick = () => alert("clicked");
