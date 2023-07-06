@@ -143,24 +143,26 @@ import "bootstrap/dist/css/bootstrap.min.css";
                         const name = ele.parentNode.childNodes[0].innerText;
                         const price = parseFloat(ele.parentNode.childNodes[1].childNodes[0].innerText.replace(/[^0-9]/g, ''));
                         console.log(ele.innerText, ':', name, '-', price);
-                        ttq.identify({
-                            email: 'jamie.vuong@bytedance.com',
-                            phone_number: '+110123456789',
-                        });
-                        ttq.track('AddToCart', {
-                            contents: [
-                            {
-                              content_id: '301',
-                              content_name: name,
-                              content_category: 'Shoes > Sneakers > running shoes',
-                              brand: 'Jamie Choo',
-                              quantity: 1,
-                              price: price,
-                            }],
-                            content_type: 'product',
-                            value: price,
-                            currency: 'USD',  
-                        });
+                        if (ele.innerText === "Add to Cart") {
+                                ttq.identify({
+                                    email: 'jamie.vuong@bytedance.com',
+                                    phone_number: '+110123456789',
+                                });
+                                ttq.track('AddToCart', {
+                                    contents: [
+                                    {
+                                      content_id: '301',
+                                      content_name: name,
+                                      content_category: 'Shoes > Sneakers > running shoes',
+                                      brand: 'Jamie Choo',
+                                      quantity: 1,
+                                      price: price,
+                                    }],
+                                    content_type: 'product',
+                                    value: price,
+                                    currency: 'USD',  
+                                });
+                        }
                 });
                 // const AddToCart = 
                 // for (const ele in AddToCart) {
