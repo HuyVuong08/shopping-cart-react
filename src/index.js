@@ -157,6 +157,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 const name = ele.parentNode.childNodes[0].innerText;
                 const price = parseFloat(ele.parentNode.childNodes[1].childNodes[0].innerText.replace(/[^0-9]/g, ''));
                 console.log(ele.innerText, ':', name, '-', price);
+                ttq.identify({
+                    email: 'jamie.vuong@bytedance.com',
+                    phone_number: '+110123456789',
+                });
                 ttq.track('AddToCart', {
                     contents: [
                     {
@@ -170,10 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     content_type: 'product',
                     value: price,
                     currency: 'USD',  
-                });
-                ttq.identify({
-                    email: 'jamie.vuong@bytedance.com',
-                    phone_number: '+110123456789',
                 });
         });
         // const AddToCart = 
