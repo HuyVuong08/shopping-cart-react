@@ -148,40 +148,41 @@ import "bootstrap/dist/css/bootstrap.min.css";
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
         console.log("GTM: Loaded");
+        document.addEventListener("DOMContentLoaded", () => {
+                console.log("DOM ready!");
+                // [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = (ele) => alert("clicked"));
+                [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = () => {
+                        const name = ele.parentNode.childNodes[0].innerText;
+                        const price = parseFloat(ele.parentNode.childNodes[1].childNodes[0].innerText.replace(/[^0-9]/g, ''));
+                        console.log(ele.innerText, ':', name, '-', price);
+                        ttq.identify({
+                            email: 'jamie.vuong@bytedance.com',
+                            phone_number: '+110123456789',
+                        });
+                        ttq.track('AddToCart', {
+                            contents: [
+                            {
+                              content_id: '301',
+                              content_name: name,
+                              content_category: 'Shoes > Sneakers > running shoes',
+                              brand: 'Jamie Choo',
+                              quantity: 1,
+                              price: price,
+                            }],
+                            content_type: 'product',
+                            value: price,
+                            currency: 'USD',  
+                        });
+                });
+                // const AddToCart = 
+                // for (const ele in AddToCart) {
+                //         ele.onclick = () => alert("clicked");
+                //         .map(ele => ele.onclick = () => alert("clicked"));
+                // }
+        });
 })(window, document, "script", "dataLayer", "GTM-5D9S9CM");
 
-document.addEventListener("DOMContentLoaded", () => {
-        console.log("DOM ready!");
-        // [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = (ele) => alert("clicked"));
-        [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = () => {
-                const name = ele.parentNode.childNodes[0].innerText;
-                const price = parseFloat(ele.parentNode.childNodes[1].childNodes[0].innerText.replace(/[^0-9]/g, ''));
-                console.log(ele.innerText, ':', name, '-', price);
-                ttq.identify({
-                    email: 'jamie.vuong@bytedance.com',
-                    phone_number: '+110123456789',
-                });
-                ttq.track('AddToCart', {
-                    contents: [
-                    {
-                      content_id: '301',
-                      content_name: name,
-                      content_category: 'Shoes > Sneakers > running shoes',
-                      brand: 'Jamie Choo',
-                      quantity: 1,
-                      price: price,
-                    }],
-                    content_type: 'product',
-                    value: price,
-                    currency: 'USD',  
-                });
-        });
-        // const AddToCart = 
-        // for (const ele in AddToCart) {
-        //         ele.onclick = () => alert("clicked");
-        //         .map(ele => ele.onclick = () => alert("clicked"));
-        // }
-});
+
 
 // const scr = "<script async src="https://www.googletagmanager.com/gtag/js?id=G-EJW5Q5ZLFW"></script>"
 // window.dataLayer = window.dataLayer || [];
