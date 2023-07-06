@@ -136,18 +136,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
         ttq.load("CI951JRC77UFB57U00O0");
         ttq.page();
         console.log("Pixel: Loaded");
-})(window, document, "ttq");
-
-(function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l !== "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-        console.log("GTM: Loaded");
         document.addEventListener("DOMContentLoaded", () => {
                 console.log("DOM ready!");
                 // [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = (ele) => alert("clicked"));
@@ -180,6 +168,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
                 //         .map(ele => ele.onclick = () => alert("clicked"));
                 // }
         });
+})(window, document, "ttq");
+
+(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l !== "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+        console.log("GTM: Loaded");
 })(window, document, "script", "dataLayer", "GTM-5D9S9CM");
 
 
