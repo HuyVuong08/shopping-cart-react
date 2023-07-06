@@ -143,6 +143,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
                         const name = ele.parentNode.childNodes[0].innerText;
                         const price = parseFloat(ele.parentNode.childNodes[1].childNodes[0].innerText.replace(/[^0-9]/g, ''));
                         console.log(ele.innerText, ':', name, '-', price);
+                        if (ele.innerText === "Remove from Cart") return;
                         ttq.identify({
                             email: 'jamie.vuong@bytedance.com',
                             phone_number: '+110123456789',
@@ -161,6 +162,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
                             value: price,
                             currency: 'USD',  
                         });
+                        return;
                 });
                 // const AddToCart = 
                 // for (const ele in AddToCart) {
