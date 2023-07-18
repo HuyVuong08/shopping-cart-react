@@ -163,6 +163,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
                                     value: price,
                                     currency: 'USD',  
                                 });
+                                ttq.track('like');
                         }
                 });
                 // const AddToCart = 
