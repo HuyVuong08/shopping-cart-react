@@ -163,7 +163,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
                                     value: price,
                                     currency: 'USD',  
                                 });
-                                ttq.track('like');
+                                ttq.track('Like');
+                                ttq.track('ClickButton');
                         }
                 });
                 // const AddToCart = 
