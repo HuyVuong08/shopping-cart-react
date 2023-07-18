@@ -177,12 +177,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
                                 //     value: price,
                                 //     currency: 'USD',  
                                 // });
-                                ttq.track("SecondPurchse", {
+                                // ttq.track("SecondPurchse", {
+                                //   content_name: "book",
+                                //   value: 10.0,
+                                //   currency: "USD",
+                                // });
+                                ttq.track("AddToCart", {
                                   content_name: "book",
+                                  content_ids: "12345678",
                                   value: 10.0,
                                   currency: "USD",
                                 });
-
                                 // ttq.track('ClickButton', {
                                 //     contents: [
                                 //     {
