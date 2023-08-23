@@ -224,23 +224,25 @@ import "bootstrap/dist/css/bootstrap.min.css";
         console.log("GTM: Loaded");
 })(window, document, "script", "dataLayer", "GTM-5D9S9CM");
 
-document.addEventListener("DOMContentLoaded", () => {
-        console.log("DOM ready!");
-        [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = () => {
-                const name = ele.parentNode.childNodes[0].innerText;
-                const price = parseFloat(ele.parentNode.childNodes[1].childNodes[0].innerText.replace(/[^0-9]/g, ''));
-                console.log(ele.innerText, ':', name, '-', price);
-                if (ele.innerText === "Add to Cart") {
-                        console.log("Google Conversion Tracking fired");
-                        gtag('event', 'conversion', {
-                                'send_to': 'AW-784426370/ss62CNes-tsDEILLhfYC',
-                                'value': 1.0,
-                                'currency': 'USD',
-                                'transaction_id': ''
-                        });
-                }
+(function () {
+        document.addEventListener("DOMContentLoaded", () => {
+                console.log("DOM ready!");
+                [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = () => {
+                        const name = ele.parentNode.childNodes[0].innerText;
+                        const price = parseFloat(ele.parentNode.childNodes[1].childNodes[0].innerText.replace(/[^0-9]/g, ''));
+                        console.log(ele.innerText, ':', name, '-', price);
+                        if (ele.innerText === "Add to Cart") {
+                                console.log("Google Conversion Tracking fired");
+                                gtag('event', 'conversion', {
+                                        'send_to': 'AW-784426370/ss62CNes-tsDEILLhfYC',
+                                        'value': 1.0,
+                                        'currency': 'USD',
+                                        'transaction_id': ''
+                                });
+                        }
+                });
         });
-});
+}();
 
 // const scr = "<script async src="https://www.googletagmanager.com/gtag/js?id=G-EJW5Q5ZLFW"></script>"
 // window.dataLayer = window.dataLayer || [];
