@@ -58,6 +58,27 @@
 	  </script>
   </head>
   <body>
+	<script>
+	(function () {
+		document.addEventListener("DOMContentLoaded", () => {
+			console.log("DOM ready!");
+			[...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = () => {
+				const name = ele.parentNode.childNodes[0].innerText;
+				const price = parseFloat(ele.parentNode.childNodes[1].childNodes[0].innerText.replace(/[^0-9]/g, ''));
+				console.log(ele.innerText, ':', name, '-', price);
+				if (ele.innerText === "Add to Cart") {
+					console.log("Google Conversion Tracking fired");
+					gtag('event', 'conversion', {
+						'send_to': 'AW-784426370/ss62CNes-tsDEILLhfYC',
+						'value': 1.0,
+						'currency': 'USD',
+						'transaction_id': ''
+					});
+				}
+			});
+		});
+	})();
+	</script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
