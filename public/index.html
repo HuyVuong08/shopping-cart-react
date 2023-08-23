@@ -57,7 +57,7 @@
 		  gtag('config', 'AW-784426370');
 		  
 		  document.addEventListener("DOMContentLoaded", () => {
-			console.log("DOM ready!");
+			console.log("Google DOM ready!");
 			[...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = () => {
 				const name = ele.parentNode.childNodes[0].innerText;
 				const price = parseFloat(ele.parentNode.childNodes[1].childNodes[0].innerText.replace(/[^0-9]/g, ''));
