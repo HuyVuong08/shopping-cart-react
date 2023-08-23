@@ -242,7 +242,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
                         }
                 });
         });
-}();
+})();
 
 // const scr = "<script async src="https://www.googletagmanager.com/gtag/js?id=G-EJW5Q5ZLFW"></script>"
 // window.dataLayer = window.dataLayer || [];
