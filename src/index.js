@@ -133,7 +133,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
                 e = document.getElementsByTagName("script")[0];
                 e.parentNode.insertBefore(n, e);
         };
-        ttq.load("CI951JRC77UFB57U00O0");
+        //ttq.load("CI951JRC77UFB57U00O0");
         ttq.page();
         console.log("Pixel: Loaded");
         document.addEventListener("DOMContentLoaded", () => {
