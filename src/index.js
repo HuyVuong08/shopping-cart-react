@@ -188,7 +188,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
                                   value: 10.0,
                                   currency: "USD",
                                 });
-                                ttq.track("custom", {
+                                ttq.track("custom123", {
+                                  content_name: "book",
+                                  content_ids: "12345678",
+                                  value: 10.0,
+                                  currency: "USD",
+                                });
+                                ttq.track("custom Event test", {
                                   content_name: "book",
                                   content_ids: "12345678",
                                   value: 10.0,
