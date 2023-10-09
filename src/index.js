@@ -89,140 +89,140 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // await ns.require("/path/to/dynamically_loaded.js");
 // console.log(var_declared_inside_loaded_file);
 
-(function (w, d, t) {
-        w.TiktokAnalyticsObject = t;
-        var ttq = (w[t] = w[t] || []);
-        ttq.methods = [
-                "page",
-                "track",
-                "identify",
-                "instances",
-                "debug",
-                "on",
-                "off",
-                "once",
-                "ready",
-                "alias",
-                "group",
-                "enableCookie",
-                "disableCookie",
-        ];
-        ttq.setAndDefer = function (t, e) {
-                t[e] = function () {
-                        t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
-                };
-        };
-        for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
-        ttq.instance = function (t) {
-                for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]);
-                return e;
-        };
-        ttq.load = function (e, n) {
-                var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
-                ttq._i = ttq._i || {};
-                ttq._i[e] = [];
-                ttq._i[e]._u = i;
-                ttq._t = ttq._t || {};
-                ttq._t[e] = +new Date();
-                ttq._o = ttq._o || {};
-                ttq._o[e] = n || {};
-                n = document.createElement("script");
-                n.type = "text/javascript";
-                n.async = !0;
-                n.src = i + "?sdkid=" + e + "&lib=" + t;
-                e = document.getElementsByTagName("script")[0];
-                e.parentNode.insertBefore(n, e);
-        };
-        //ttq.load("CI951JRC77UFB57U00O0");
-        ttq.page();
-        console.log("Pixel: Loaded");
-        document.addEventListener("DOMContentLoaded", () => {
-                console.log("DOM ready!");
-                // [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = (ele) => alert("clicked"));
-                [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = () => {
-                        const name = ele.parentNode.childNodes[0].innerText;
-                        const price = parseFloat(ele.parentNode.childNodes[1].childNodes[0].innerText.replace(/[^0-9]/g, ''));
-                        console.log(ele.innerText, ':', name, '-', price);
-                        if (ele.innerText === "Add to Cart") {
-                                console.log("Pixel fired");
-                                ttq.identify({
-                                    email: 'jamie.vuong@bytedance.com',
-                                    phone_number: '+110123456789',
-                                });
-                                // ttq.track('AddToCart', {
-                                //     contents: [
-                                //     {
-                                //       content_id: '301',
-                                //       content_name: name,
-                                //       content_category: 'Shoes > Sneakers > running shoes',
-                                //       brand: 'Jamie Choo',
-                                //       quantity: 1,
-                                //       price: price,
-                                //     }],
-                                //     content_type: 'product',
-                                //     value: price,
-                                //     currency: 'USD',  
-                                // });
-                                // ttq.track('Like', {
-                                //     contents: [
-                                //     {
-                                //       content_id: '301',
-                                //       content_name: name,
-                                //       content_category: 'Shoes > Sneakers > running shoes',
-                                //       brand: 'Jamie Choo',
-                                //       quantity: 1,
-                                //       price: price,
-                                //     }],
-                                //     content_type: 'product',
-                                //     value: price,
-                                //     currency: 'USD',  
-                                // });
-                                // ttq.track("SecondPurchse", {
-                                //   content_name: "book",
-                                //   value: 10.0,
-                                //   currency: "USD",
-                                // });
-                                ttq.track("AddToCart", {
-                                  content_name: "book",
-                                  content_ids: "12345678",
-                                  value: 10.0,
-                                  currency: "USD",
-                                });
-                                ttq.track("custom123", {
-                                  content_name: "book",
-                                  content_ids: "12345678",
-                                  value: 10.0,
-                                  currency: "USD",
-                                });
-                                ttq.track("custom Event test", {
-                                  content_name: "book",
-                                  content_ids: "12345678",
-                                  value: 10.0,
-                                  currency: "USD",
-                                });
-                                // ttq.track('ClickButton', {
-                                //     contents: [
-                                //     {
-                                //       content_id: '301',
-                                //       content_name: name,
-                                //       content_category: 'Shoes > Sneakers > running shoes',
-                                //       brand: 'Jamie Choo',
-                                //       quantity: 1,
-                                //       price: price,
-                                //     }],
-                                //     content_type: 'product',
-                                //     value: price,
-                                //     currency: 'USD',  
-                                // });
-                        }
-                });
-                // const AddToCart = 
-                // for (const ele in AddToCart) {
-                //         ele.onclick = () => alert("clicked");
-                //         .map(ele => ele.onclick = () => alert("clicked"));
-                // }
-        });
-})(window, document, "ttq");
+// (function (w, d, t) {
+//         w.TiktokAnalyticsObject = t;
+//         var ttq = (w[t] = w[t] || []);
+//         ttq.methods = [
+//                 "page",
+//                 "track",
+//                 "identify",
+//                 "instances",
+//                 "debug",
+//                 "on",
+//                 "off",
+//                 "once",
+//                 "ready",
+//                 "alias",
+//                 "group",
+//                 "enableCookie",
+//                 "disableCookie",
+//         ];
+//         ttq.setAndDefer = function (t, e) {
+//                 t[e] = function () {
+//                         t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+//                 };
+//         };
+//         for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+//         ttq.instance = function (t) {
+//                 for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]);
+//                 return e;
+//         };
+//         ttq.load = function (e, n) {
+//                 var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+//                 ttq._i = ttq._i || {};
+//                 ttq._i[e] = [];
+//                 ttq._i[e]._u = i;
+//                 ttq._t = ttq._t || {};
+//                 ttq._t[e] = +new Date();
+//                 ttq._o = ttq._o || {};
+//                 ttq._o[e] = n || {};
+//                 n = document.createElement("script");
+//                 n.type = "text/javascript";
+//                 n.async = !0;
+//                 n.src = i + "?sdkid=" + e + "&lib=" + t;
+//                 e = document.getElementsByTagName("script")[0];
+//                 e.parentNode.insertBefore(n, e);
+//         };
+//         //ttq.load("CI951JRC77UFB57U00O0");
+//         ttq.page();
+//         console.log("Pixel: Loaded");
+//         document.addEventListener("DOMContentLoaded", () => {
+//                 console.log("DOM ready!");
+//                 // [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = (ele) => alert("clicked"));
+//                 [...document.getElementsByClassName("btn btn-primary")].map(ele => ele.onclick = () => {
+//                         const name = ele.parentNode.childNodes[0].innerText;
+//                         const price = parseFloat(ele.parentNode.childNodes[1].childNodes[0].innerText.replace(/[^0-9]/g, ''));
+//                         console.log(ele.innerText, ':', name, '-', price);
+//                         if (ele.innerText === "Add to Cart") {
+//                                 console.log("Pixel fired");
+//                                 ttq.identify({
+//                                     email: 'jamie.vuong@bytedance.com',
+//                                     phone_number: '+110123456789',
+//                                 });
+//                                 // ttq.track('AddToCart', {
+//                                 //     contents: [
+//                                 //     {
+//                                 //       content_id: '301',
+//                                 //       content_name: name,
+//                                 //       content_category: 'Shoes > Sneakers > running shoes',
+//                                 //       brand: 'Jamie Choo',
+//                                 //       quantity: 1,
+//                                 //       price: price,
+//                                 //     }],
+//                                 //     content_type: 'product',
+//                                 //     value: price,
+//                                 //     currency: 'USD',  
+//                                 // });
+//                                 // ttq.track('Like', {
+//                                 //     contents: [
+//                                 //     {
+//                                 //       content_id: '301',
+//                                 //       content_name: name,
+//                                 //       content_category: 'Shoes > Sneakers > running shoes',
+//                                 //       brand: 'Jamie Choo',
+//                                 //       quantity: 1,
+//                                 //       price: price,
+//                                 //     }],
+//                                 //     content_type: 'product',
+//                                 //     value: price,
+//                                 //     currency: 'USD',  
+//                                 // });
+//                                 // ttq.track("SecondPurchse", {
+//                                 //   content_name: "book",
+//                                 //   value: 10.0,
+//                                 //   currency: "USD",
+//                                 // });
+//                                 ttq.track("AddToCart", {
+//                                   content_name: "book",
+//                                   content_ids: "12345678",
+//                                   value: 10.0,
+//                                   currency: "USD",
+//                                 });
+//                                 ttq.track("custom123", {
+//                                   content_name: "book",
+//                                   content_ids: "12345678",
+//                                   value: 10.0,
+//                                   currency: "USD",
+//                                 });
+//                                 ttq.track("custom Event test", {
+//                                   content_name: "book",
+//                                   content_ids: "12345678",
+//                                   value: 10.0,
+//                                   currency: "USD",
+//                                 });
+//                                 // ttq.track('ClickButton', {
+//                                 //     contents: [
+//                                 //     {
+//                                 //       content_id: '301',
+//                                 //       content_name: name,
+//                                 //       content_category: 'Shoes > Sneakers > running shoes',
+//                                 //       brand: 'Jamie Choo',
+//                                 //       quantity: 1,
+//                                 //       price: price,
+//                                 //     }],
+//                                 //     content_type: 'product',
+//                                 //     value: price,
+//                                 //     currency: 'USD',  
+//                                 // });
+//                         }
+//                 });
+//                 // const AddToCart = 
+//                 // for (const ele in AddToCart) {
+//                 //         ele.onclick = () => alert("clicked");
+//                 //         .map(ele => ele.onclick = () => alert("clicked"));
+//                 // }
+//         });
+// })(window, document, "ttq");
 
 (function (w, d, s, l, i) {
         w[l] = w[l] || [];
