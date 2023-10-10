@@ -200,7 +200,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
                                   value: 10.0,
                                   currency: "USD",
                                 });
-                                ttq.track(like);
+                                ttq.track("like");
 
                                 // ttq.track('ClickButton', {
                                 //     contents: [
