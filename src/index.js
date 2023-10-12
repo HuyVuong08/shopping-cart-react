@@ -227,6 +227,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
                                         content_name:'dress',
                                         quantity: 1,}
                                 );
+                                ttq.track('SecondPurchse',{content_name: 'book', value: 10.0, currency:
+                                        'USD',});
 
                                 // ttq.track('AddToCart', {
                                 //         content_name: 'book', 
