@@ -225,10 +225,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
                                         content_id: '301',
                                         content_type: 'product',
                                         content_name:'dress',
-                                        quantity: 1,}
-                                );
-                                ttq.track('SecondPurchse',{content_name: 'book', value: 10.0, currency:
-                                        'USD',});
+                                        quantity: 1,
+                                });
+                                ttq.track('SecondPurchse',{
+                                        content_name: 'book', 
+                                        value: 10.0, 
+                                        currency:'USD',
+                                });
 
                                 // ttq.track('AddToCart', {
                                 //         content_name: 'book', 
