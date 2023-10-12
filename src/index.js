@@ -211,6 +211,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
                                         value: 10.0, 
                                         currency: 'USD',
                                 });
+                                // ttq.track('AddToCart', {
+                                //         content_name: 'book', 
+                                //         value: 10,0, 
+                                //         currency: 'USD',
+                                // });
                                 // ttq.track('ClickButton', {
                                 //     contents: [
                                 //     {
