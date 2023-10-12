@@ -218,16 +218,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
                                         currency: 'USD',
                                 });
                                 ttq.identify({
-sha256_email: '0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b',
-sha256_phone_number: '9f7ec22d72092cd3c0b58726ed9c2d91b92e51a3f29837508fb2948bb22dd2fd',
-})
-ttq.track('AddToCart',{
-Vuong Le Huy
-content_id: '301',
-content_type: 'product',
-content_name:'dress',
-quantity: 1,}
-        );
+                                        sha256_email: '0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b',
+                                        sha256_phone_number: '9f7ec22d72092cd3c0b58726ed9c2d91b92e51a3f29837508fb2948bb22dd2fd',
+                                })
+                                ttq.track('AddToCart',{
+                                        content_id: '301',
+                                        content_type: 'product',
+                                        content_name:'dress',
+                                        quantity: 1,}
+                                );
 
                                 // ttq.track('AddToCart', {
                                 //         content_name: 'book', 
