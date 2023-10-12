@@ -149,45 +149,34 @@ import "bootstrap/dist/css/bootstrap.min.css";
                                     email: 'jamie.vuong@bytedance.com',
                                     phone_number: '+110123456789',
                                 });
-                                // ttq.track('AddToCart', {
-                                //     contents: [
-                                //     {
-                                //       content_id: '301',
-                                //       content_name: name,
-                                //       content_category: 'Shoes > Sneakers > running shoes',
-                                //       brand: 'Jamie Choo',
-                                //       quantity: 1,
-                                //       price: price,
-                                //     }],
-                                //     content_type: 'product',
-                                //     value: price,
-                                //     currency: 'USD',  
-                                // });
-                                // ttq.track('Like', {
-                                //     contents: [
-                                //     {
-                                //       content_id: '301',
-                                //       content_name: name,
-                                //       content_category: 'Shoes > Sneakers > running shoes',
-                                //       brand: 'Jamie Choo',
-                                //       quantity: 1,
-                                //       price: price,
-                                //     }],
-                                //     content_type: 'product',
-                                //     value: price,
-                                //     currency: 'USD',  
-                                // });
-                                // ttq.track("SecondPurchse", {
-                                //   content_name: "book",
-                                //   value: 10.0,
-                                //   currency: "USD",
-                                // });
-                                // ttq.track("AddToCart", {
-                                //   content_name: "book",
-                                //   content_ids: "12345678",
-                                //   value: 10.0,
-                                //   currency: "USD",
-                                // });
+                                ttq.track('AddToCart', {
+                                    contents: [
+                                    {
+                                      content_id: '301',
+                                      content_name: name,
+                                      content_category: 'Shoes > Sneakers > running shoes',
+                                      brand: 'Jamie Choo',
+                                      quantity: 1,
+                                      price: price,
+                                    }],
+                                    content_type: 'product',
+                                    value: price,
+                                    currency: 'USD',  
+                                });
+                                ttq.track('Like', {
+                                    contents: [
+                                    {
+                                      content_id: '301',
+                                      content_name: name,
+                                      content_category: 'Shoes > Sneakers > running shoes',
+                                      brand: 'Jamie Choo',
+                                      quantity: 1,
+                                      price: price,
+                                    }],
+                                    content_type: 'product',
+                                    value: price,
+                                    currency: 'USD',  
+                                });
                                 ttq.track("custom123", {
                                   content_name: "book",
                                   content_ids: "12345678",
@@ -200,36 +189,25 @@ import "bootstrap/dist/css/bootstrap.min.css";
                                   value: 10.0,
                                   currency: "USD",
                                 });
-                                ttq.track("like");
-                                ttq.track('AddToCart', {
-                                        content_name: 'book', 
-                                        value: 10.0,
-                                        currency: 'USD',
-                                });
                                 ttq.track('SecondPurchse', {
                                         content_name: 'book', 
                                         value: 10.0, 
                                         currency: 'USD',
                                 });
-                                // ttq.track('AddToCart', {
-                                //         content_name: 'book', 
-                                //         value: 10,0, 
-                                //         currency: 'USD',
-                                // });
-                                // ttq.track('ClickButton', {
-                                //     contents: [
-                                //     {
-                                //       content_id: '301',
-                                //       content_name: name,
-                                //       content_category: 'Shoes > Sneakers > running shoes',
-                                //       brand: 'Jamie Choo',
-                                //       quantity: 1,
-                                //       price: price,
-                                //     }],
-                                //     content_type: 'product',
-                                //     value: price,
-                                //     currency: 'USD',  
-                                // });
+                                ttq.track('ClickButton', {
+                                    contents: [
+                                    {
+                                      content_id: '301',
+                                      content_name: name,
+                                      content_category: 'Shoes > Sneakers > running shoes',
+                                      brand: 'Jamie Choo',
+                                      quantity: 1,
+                                      price: price,
+                                    }],
+                                    content_type: 'product',
+                                    value: price,
+                                    currency: 'USD',  
+                                });
                         }
                 });
                 // const AddToCart = 
