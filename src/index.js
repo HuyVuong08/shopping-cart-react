@@ -163,7 +163,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
                                     value: price,
                                     currency: 'USD',  
                                 });
-                                ttq.track('Like', {
+                                ttq.track('CompletePayment', {
                                     contents: [
                                     {
                                       content_id: '301',
