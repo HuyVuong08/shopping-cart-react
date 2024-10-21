@@ -10,12 +10,10 @@ const Cart = () => {
     dispatch,
   } = CartState();
 
-  const [total, setTotal] = useState();
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    setTotal(
-      cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0),
-    );
+    setTotal(cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0));
   }, [cart]);
 
   return (
@@ -55,9 +53,7 @@ const Cart = () => {
                   <Button
                     type="button"
                     variant="light"
-                    onClick={() =>
-                      dispatch({ type: "REMOVE_FROM_CART", payload: prod })
-                    }
+                    onClick={() => dispatch({ type: "REMOVE_FROM_CART", payload: prod })}
                   >
                     <AiFillDelete fontSize="20px" />
                   </Button>
@@ -69,7 +65,7 @@ const Cart = () => {
       </div>
       <div className="filters summary">
         <span className="title">Subtotal ({cart.length}) items</span>
-        <span style={{ fontWeight: 700, fontSize: 20 }}>Total: $ {total}</span>
+        <span style={{ fontWeight: 700, fontSize: 20 }}>Total: $ {total.toFixed(2)}</span>
         <Button type="button" disabled={cart.length === 0}>
           Proceed to Checkout
         </Button>
